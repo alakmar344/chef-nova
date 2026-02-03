@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ChefMind | AI-Powered Voice Cooking Assistant</title>
+    <title>ChefNova | AI-Powered Voice Cooking Assistant</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -44,7 +44,6 @@
             border-radius: 50%;
             background: radial-gradient(circle at 30% 30%, #ff8c42, #ff6b35);
             position: relative;
-            cursor: pointer;
             transition: all 0.3s ease;
             animation: pulse 2s infinite;
         }
@@ -54,73 +53,20 @@
             box-shadow: 0 0 60px rgba(255, 107, 53, 0.6);
         }
         
-        .voice-orb::before {
-            content: '';
-            position: absolute;
-            top: -10px;
-            left: -10px;
-            right: -10px;
-            bottom: -10px;
-            border-radius: 50%;
-            border: 2px solid rgba(255, 107, 53, 0.3);
-            animation: ripple 2s infinite;
-        }
-        
         @keyframes pulse {
             0%, 100% { transform: scale(1); }
             50% { transform: scale(1.05); }
-        }
-        
-        @keyframes ripple {
-            0% { transform: scale(1); opacity: 1; }
-            100% { transform: scale(1.5); opacity: 0; }
-        }
-        
-        .wave-bar {
-            width: 4px;
-            background: linear-gradient(to top, #ff6b35, #ffd700);
-            border-radius: 2px;
-            animation: wave 1s ease-in-out infinite;
-        }
-        
-        .wave-bar:nth-child(1) { animation-delay: 0s; height: 20%; }
-        .wave-bar:nth-child(2) { animation-delay: 0.1s; height: 40%; }
-        .wave-bar:nth-child(3) { animation-delay: 0.2s; height: 60%; }
-        .wave-bar:nth-child(4) { animation-delay: 0.3s; height: 40%; }
-        .wave-bar:nth-child(5) { animation-delay: 0.4s; height: 20%; }
-        
-        @keyframes wave {
-            0%, 100% { transform: scaleY(0.5); }
-            50% { transform: scaleY(1); }
         }
         
         .glass-card {
             background: rgba(255, 255, 255, 0.03);
             backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.1);
-            transition: all 0.3s ease;
-        }
-        
-        .glass-card:hover {
-            background: rgba(255, 255, 255, 0.06);
-            border-color: rgba(255, 107, 53, 0.5);
-            transform: translateY(-5px);
         }
         
         .feature-icon {
             background: linear-gradient(135deg, rgba(255, 107, 53, 0.2), rgba(247, 147, 30, 0.2));
             border: 1px solid rgba(255, 107, 53, 0.3);
-        }
-        
-        .scroll-reveal {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s ease;
-        }
-        
-        .scroll-reveal.active {
-            opacity: 1;
-            transform: translateY(0);
         }
         
         .gradient-border {
@@ -151,8 +97,6 @@
         .btn-primary {
             background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
             transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
         }
         
         .btn-primary:hover {
@@ -160,34 +104,9 @@
             box-shadow: 0 10px 30px rgba(255, 107, 53, 0.4);
         }
         
-        .btn-primary::after {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.3), transparent);
-            transform: rotate(45deg);
-            transition: all 0.5s;
-        }
-        
-        .btn-primary:hover::after {
-            left: 100%;
-        }
-        
         .recipe-card {
             background: linear-gradient(145deg, #151515, #0f0f0f);
             border: 1px solid rgba(255, 255, 255, 0.05);
-        }
-        
-        .floating {
-            animation: floating 6s ease-in-out infinite;
-        }
-        
-        @keyframes floating {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
         }
         
         .grid-pattern {
@@ -206,15 +125,14 @@
                     <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-orange-500 to-yellow-500 flex items-center justify-center">
                         <i data-lucide="chef-hat" class="w-6 h-6 text-white"></i>
                     </div>
-                    <span class="text-2xl font-bold tracking-tight">ChefMind</span>
+                    <span class="text-2xl font-bold tracking-tight">ChefNova</span>
                 </div>
                 <div class="hidden md:flex items-center gap-8">
                     <a href="#features" class="text-gray-400 hover:text-white transition-colors text-sm font-medium">Features</a>
                     <a href="#how-it-works" class="text-gray-400 hover:text-white transition-colors text-sm font-medium">How it Works</a>
                     <a href="#recipes" class="text-gray-400 hover:text-white transition-colors text-sm font-medium">Recipes</a>
-                    <a href="#about" class="text-gray-400 hover:text-white transition-colors text-sm font-medium">About</a>
                 </div>
-                <button class="btn-primary px-6 py-2.5 rounded-full font-semibold text-sm flex items-center gap-2">
+                <button class="btn-primary px-6 py-2.5 rounded-full font-semibold text-sm flex items-center gap-2" onclick="window.location.href='https://chefmind.esamz.site'">
                     <span>Try Now</span>
                     <i data-lucide="arrow-right" class="w-4 h-4"></i>
                 </button>
@@ -229,29 +147,29 @@
         <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-yellow-500/10 rounded-full blur-3xl"></div>
         
         <div class="relative z-10 max-w-7xl mx-auto px-6 text-center">
-            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-8 scroll-reveal">
-                <span class="w-2 h-2 rounded-full bg-orange-500 animate-pulse"></span>
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-8">
+                <span class="w-2 h-2 rounded-full bg-orange-500"></span>
                 <span class="text-sm text-gray-300">Powered by ESAMZ AI</span>
             </div>
             
-            <h1 class="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight scroll-reveal">
+            <h1 class="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight">
                 Cook with Your<br>
                 <span class="gradient-text">Voice</span>
             </h1>
             
-            <p class="text-xl md:text-2xl text-gray-400 max-w-2xl mx-auto mb-12 scroll-reveal">
+            <p class="text-xl md:text-2xl text-gray-400 max-w-2xl mx-auto mb-12">
                 Just say what you want to cook. Our AI generates custom recipes instantly. 
                 Hands-free cooking for the modern kitchen.
             </p>
             
-            <div class="flex flex-col items-center gap-8 scroll-reveal">
-                <div class="voice-orb flex items-center justify-center glow-orange" onclick="activateVoice()">
+            <div class="flex flex-col items-center gap-8">
+                <a href="https://chefmind.esamz.site" class="voice-orb flex items-center justify-center glow-orange">
                     <i data-lucide="mic" class="w-8 h-8 text-white relative z-10"></i>
-                </div>
-                <p class="text-sm text-gray-500 uppercase tracking-widest">Tap to speak</p>
+                </a>
+                <p class="text-sm text-gray-500 uppercase tracking-widest">Click to try</p>
             </div>
 
-            <div class="mt-20 grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto scroll-reveal">
+            <div class="mt-20 grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
                 <div class="glass-card p-6 rounded-2xl text-center">
                     <div class="text-3xl font-bold gradient-text mb-1">10K+</div>
                     <div class="text-sm text-gray-400">Recipes Generated</div>
@@ -271,23 +189,23 @@
     <!-- Voice Interface Demo -->
     <section class="py-20 relative overflow-hidden">
         <div class="max-w-5xl mx-auto px-6">
-            <div class="gradient-border p-8 md:p-12 scroll-reveal">
+            <div class="gradient-border p-8 md:p-12">
                 <div class="flex flex-col md:flex-row items-center justify-between gap-8">
                     <div class="flex-1">
                         <h2 class="text-3xl md:text-4xl font-bold mb-4">"I want to make pasta with tomatoes"</h2>
-                        <p class="text-gray-400 mb-6">Speak naturally. ChefMind understands ingredients, dietary restrictions, cuisine types, and cooking methods.</p>
+                        <p class="text-gray-400 mb-6">Speak naturally. ChefNova understands ingredients, dietary restrictions, cuisine types, and cooking methods.</p>
                         <div class="flex gap-3">
                             <span class="px-3 py-1 rounded-full bg-orange-500/20 text-orange-400 text-xs border border-orange-500/30">Vegan</span>
                             <span class="px-3 py-1 rounded-full bg-orange-500/20 text-orange-400 text-xs border border-orange-500/30">Gluten-Free</span>
                             <span class="px-3 py-1 rounded-full bg-orange-500/20 text-orange-400 text-xs border border-orange-500/30">Quick Meals</span>
                         </div>
                     </div>
-                    <div class="flex gap-1 items-end h-16" id="voice-waves">
-                        <div class="wave-bar"></div>
-                        <div class="wave-bar"></div>
-                        <div class="wave-bar"></div>
-                        <div class="wave-bar"></div>
-                        <div class="wave-bar"></div>
+                    <div class="flex gap-1 items-end h-16">
+                        <div class="w-1 bg-orange-500 rounded-full h-4"></div>
+                        <div class="w-1 bg-orange-500 rounded-full h-8"></div>
+                        <div class="w-1 bg-orange-500 rounded-full h-12"></div>
+                        <div class="w-1 bg-orange-500 rounded-full h-8"></div>
+                        <div class="w-1 bg-orange-500 rounded-full h-4"></div>
                     </div>
                 </div>
             </div>
@@ -297,13 +215,13 @@
     <!-- Features Grid -->
     <section id="features" class="py-32 relative">
         <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center mb-20 scroll-reveal">
+            <div class="text-center mb-20">
                 <h2 class="text-4xl md:text-5xl font-bold mb-4">Intelligent Cooking</h2>
                 <p class="text-gray-400 max-w-2xl mx-auto">Advanced AI that understands context, dietary needs, and cooking skill levels.</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="glass-card p-8 rounded-3xl scroll-reveal">
+                <div class="glass-card p-8 rounded-3xl">
                     <div class="feature-icon w-14 h-14 rounded-2xl flex items-center justify-center mb-6">
                         <i data-lucide="mic" class="w-7 h-7 text-orange-400"></i>
                     </div>
@@ -311,7 +229,7 @@
                     <p class="text-gray-400 text-sm leading-relaxed">No typing needed while cooking. Pure voice interaction designed for messy hands and busy kitchens.</p>
                 </div>
 
-                <div class="glass-card p-8 rounded-3xl scroll-reveal">
+                <div class="glass-card p-8 rounded-3xl">
                     <div class="feature-icon w-14 h-14 rounded-2xl flex items-center justify-center mb-6">
                         <i data-lucide="brain" class="w-7 h-7 text-orange-400"></i>
                     </div>
@@ -319,7 +237,7 @@
                     <p class="text-gray-400 text-sm leading-relaxed">Remembers your preferences, skill level, and available ingredients across conversations.</p>
                 </div>
 
-                <div class="glass-card p-8 rounded-3xl scroll-reveal">
+                <div class="glass-card p-8 rounded-3xl">
                     <div class="feature-icon w-14 h-14 rounded-2xl flex items-center justify-center mb-6">
                         <i data-lucide="clock" class="w-7 h-7 text-orange-400"></i>
                     </div>
@@ -327,7 +245,7 @@
                     <p class="text-gray-400 text-sm leading-relaxed">Recipe adjusts based on your pace. Ask for substitutions or clarification mid-cooking.</p>
                 </div>
 
-                <div class="glass-card p-8 rounded-3xl scroll-reveal">
+                <div class="glass-card p-8 rounded-3xl">
                     <div class="feature-icon w-14 h-14 rounded-2xl flex items-center justify-center mb-6">
                         <i data-lucide="leaf" class="w-7 h-7 text-orange-400"></i>
                     </div>
@@ -335,7 +253,7 @@
                     <p class="text-gray-400 text-sm leading-relaxed">Automatically suggests alternatives for allergies, vegan, keto, or any dietary restriction.</p>
                 </div>
 
-                <div class="glass-card p-8 rounded-3xl scroll-reveal">
+                <div class="glass-card p-8 rounded-3xl">
                     <div class="feature-icon w-14 h-14 rounded-2xl flex items-center justify-center mb-6">
                         <i data-lucide="globe" class="w-7 h-7 text-orange-400"></i>
                     </div>
@@ -343,7 +261,7 @@
                     <p class="text-gray-400 text-sm leading-relaxed">From Indian curries to Italian pasta, access authentic recipes with local ingredient alternatives.</p>
                 </div>
 
-                <div class="glass-card p-8 rounded-3xl scroll-reveal">
+                <div class="glass-card p-8 rounded-3xl">
                     <div class="feature-icon w-14 h-14 rounded-2xl flex items-center justify-center mb-6">
                         <i data-lucide="shield" class="w-7 h-7 text-orange-400"></i>
                     </div>
@@ -358,7 +276,7 @@
     <section id="how-it-works" class="py-32 relative bg-neutral-900/50">
         <div class="max-w-7xl mx-auto px-6">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                <div class="scroll-reveal">
+                <div>
                     <h2 class="text-4xl md:text-5xl font-bold mb-6">Three Steps to<br><span class="gradient-text">Culinary Magic</span></h2>
                     <p class="text-gray-400 text-lg mb-12">No apps to download. No accounts to create. Just pure voice-powered cooking assistance.</p>
                     
@@ -389,15 +307,15 @@
                     </div>
                 </div>
                 
-                <div class="relative scroll-reveal">
+                <div class="relative">
                     <div class="absolute inset-0 bg-gradient-to-r from-orange-500/20 to-yellow-500/20 rounded-3xl blur-3xl"></div>
-                    <div class="relative recipe-card rounded-3xl p-8 floating">
+                    <div class="relative recipe-card rounded-3xl p-8">
                         <div class="flex items-center justify-between mb-6">
                             <div class="flex items-center gap-3">
                                 <div class="w-10 h-10 rounded-full bg-orange-500/20 flex items-center justify-center">
                                     <i data-lucide="bot" class="w-5 h-5 text-orange-400"></i>
                                 </div>
-                                <span class="font-semibold">ChefMind AI</span>
+                                <span class="font-semibold">ChefNova AI</span>
                             </div>
                             <span class="text-xs text-gray-500">Just now</span>
                         </div>
@@ -431,17 +349,15 @@
     <!-- Sample Recipes -->
     <section id="recipes" class="py-32">
         <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center mb-16 scroll-reveal">
+            <div class="text-center mb-16">
                 <h2 class="text-4xl md:text-5xl font-bold mb-4">Generated with Voice</h2>
-                <p class="text-gray-400">Real recipes created by users speaking to ChefMind</p>
+                <p class="text-gray-400">Real recipes created by users speaking to ChefNova</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="recipe-card rounded-3xl overflow-hidden group scroll-reveal">
-                    <div class="h-48 bg-gradient-to-br from-red-900/50 to-orange-900/50 relative overflow-hidden">
-                        <div class="absolute inset-0 flex items-center justify-center">
-                            <i data-lucide="flame" class="w-16 h-16 text-orange-500/30 group-hover:scale-110 transition-transform duration-500"></i>
-                        </div>
+                <div class="recipe-card rounded-3xl overflow-hidden">
+                    <div class="h-48 bg-gradient-to-br from-red-900/50 to-orange-900/50 relative flex items-center justify-center">
+                        <i data-lucide="flame" class="w-16 h-16 text-orange-500/30"></i>
                         <div class="absolute top-4 right-4 bg-black/50 backdrop-blur px-3 py-1 rounded-full text-xs border border-white/10">
                             25 mins
                         </div>
@@ -456,11 +372,9 @@
                     </div>
                 </div>
 
-                <div class="recipe-card rounded-3xl overflow-hidden group scroll-reveal">
-                    <div class="h-48 bg-gradient-to-br from-green-900/50 to-emerald-900/50 relative overflow-hidden">
-                        <div class="absolute inset-0 flex items-center justify-center">
-                            <i data-lucide="leaf" class="w-16 h-16 text-green-500/30 group-hover:scale-110 transition-transform duration-500"></i>
-                        </div>
+                <div class="recipe-card rounded-3xl overflow-hidden">
+                    <div class="h-48 bg-gradient-to-br from-green-900/50 to-emerald-900/50 relative flex items-center justify-center">
+                        <i data-lucide="leaf" class="w-16 h-16 text-green-500/30"></i>
                         <div class="absolute top-4 right-4 bg-black/50 backdrop-blur px-3 py-1 rounded-full text-xs border border-white/10">
                             15 mins
                         </div>
@@ -475,11 +389,9 @@
                     </div>
                 </div>
 
-                <div class="recipe-card rounded-3xl overflow-hidden group scroll-reveal">
-                    <div class="h-48 bg-gradient-to-br from-yellow-900/50 to-amber-900/50 relative overflow-hidden">
-                        <div class="absolute inset-0 flex items-center justify-center">
-                            <i data-lucide="cookie" class="w-16 h-16 text-yellow-500/30 group-hover:scale-110 transition-transform duration-500"></i>
-                        </div>
+                <div class="recipe-card rounded-3xl overflow-hidden">
+                    <div class="h-48 bg-gradient-to-br from-yellow-900/50 to-amber-900/50 relative flex items-center justify-center">
+                        <i data-lucide="cookie" class="w-16 h-16 text-yellow-500/30"></i>
                         <div class="absolute top-4 right-4 bg-black/50 backdrop-blur px-3 py-1 rounded-full text-xs border border-white/10">
                             45 mins
                         </div>
@@ -500,19 +412,19 @@
     <!-- CTA Section -->
     <section class="py-32 relative overflow-hidden">
         <div class="absolute inset-0 bg-gradient-to-b from-orange-500/10 to-transparent"></div>
-        <div class="max-w-4xl mx-auto px-6 text-center relative z-10 scroll-reveal">
+        <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
             <h2 class="text-5xl md:text-6xl font-bold mb-6">Start Cooking<br>with Your Voice</h2>
             <p class="text-xl text-gray-400 mb-12">Join thousands cooking hands-free with AI-powered assistance.</p>
             
             <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <button class="btn-primary px-8 py-4 rounded-full font-bold text-lg flex items-center gap-3 glow-orange">
+                <a href="https://chefmind.esamz.site" class="btn-primary px-8 py-4 rounded-full font-bold text-lg flex items-center gap-3 glow-orange">
                     <i data-lucide="mic" class="w-5 h-5"></i>
-                    <span>Try ChefMind Now</span>
-                </button>
-                <button class="px-8 py-4 rounded-full font-semibold text-lg border border-white/20 hover:bg-white/5 transition-all flex items-center gap-3">
-                    <i data-lucide="play" class="w-5 h-5"></i>
-                    <span>Watch Demo</span>
-                </button>
+                    <span>Try ChefNova Now</span>
+                </a>
+                <a href="https://esamz.info" class="px-8 py-4 rounded-full font-semibold text-lg border border-white/20 hover:bg-white/5 transition-all flex items-center gap-3">
+                    <i data-lucide="info" class="w-5 h-5"></i>
+                    <span>About ESAMZ</span>
+                </a>
             </div>
             
             <p class="mt-8 text-sm text-gray-500">No signup required • Free to use • Privacy focused</p>
@@ -527,13 +439,12 @@
                     <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-orange-500 to-yellow-500 flex items-center justify-center">
                         <i data-lucide="chef-hat" class="w-4 h-4 text-white"></i>
                     </div>
-                    <span class="text-xl font-bold">ChefMind</span>
+                    <span class="text-xl font-bold">ChefNova</span>
                 </div>
                 
                 <div class="flex gap-8 text-sm text-gray-400">
-                    <a href="#" class="hover:text-white transition-colors">Privacy</a>
-                    <a href="#" class="hover:text-white transition-colors">Terms</a>
-                    <a href="#" class="hover:text-white transition-colors">Contact</a>
+                    <a href="https://chefmind.esamz.site" class="hover:text-white transition-colors">Open App</a>
+                    <a href="https://esamz.info" class="hover:text-white transition-colors">ESAMZ AI</a>
                 </div>
                 
                 <div class="text-sm text-gray-500">
@@ -543,74 +454,9 @@
         </div>
     </footer>
 
-    <!-- Voice Modal -->
-    <div id="voiceModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/90 backdrop-blur-xl">
-        <div class="text-center p-8">
-            <div class="voice-orb w-32 h-32 mx-auto mb-8 flex items-center justify-center" onclick="closeVoice()">
-                <i data-lucide="mic" class="w-10 h-10 text-white"></i>
-            </div>
-            <h3 class="text-2xl font-bold mb-2">Listening...</h3>
-            <p class="text-gray-400">Describe what you want to cook</p>
-            <div class="flex justify-center gap-1 mt-8 h-12 items-end">
-                <div class="wave-bar w-1 bg-orange-500"></div>
-                <div class="wave-bar w-1 bg-orange-500"></div>
-                <div class="wave-bar w-1 bg-orange-500"></div>
-                <div class="wave-bar w-1 bg-orange-500"></div>
-                <div class="wave-bar w-1 bg-orange-500"></div>
-            </div>
-        </div>
-    </div>
-
     <script>
-        // Initialize Lucide icons
+        // Initialize Lucide icons only
         lucide.createIcons();
-
-        // Scroll reveal animation
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: "0px 0px -50px 0px"
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('active');
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.scroll-reveal').forEach((el) => observer.observe(el));
-
-        // Voice modal functions
-        function activateVoice() {
-            document.getElementById('voiceModal').classList.remove('hidden');
-            document.getElementById('voiceModal').classList.add('flex');
-        }
-
-        function closeVoice() {
-            document.getElementById('voiceModal').classList.add('hidden');
-            document.getElementById('voiceModal').classList.remove('flex');
-        }
-
-        // Smooth scroll for navigation
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
-            });
-        });
-
-        // Parallax effect for hero
-        window.addEventListener('scroll', () => {
-            const scrolled = window.pageYOffset;
-            const parallax = document.querySelector('.grid-pattern');
-            if (parallax) {
-                parallax.style.transform = `translateY(${scrolled * 0.5}px)`;
-            }
-        });
     </script>
 </body>
 </html>
